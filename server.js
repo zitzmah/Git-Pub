@@ -14,10 +14,8 @@ app.get("/", (req, res) => {
 })
 
 app.get("/drinks", (req, res) => {
-    // res.send(fruits)
-    // "index.ejs" => "./views/index.ejs"
-    // {fruits} => {fruits:fruits}
-    res.send(drinks)
+    //res.send(drinks)
+    res.render("index.ejs", {drinks:drinks})
 })
 
 //******************************* */
