@@ -13,12 +13,22 @@
         h1 {
             color: blue
         }
+
+        ul {
+            text-transform: capitalize;
+        }
     </style>
 </head>
 
 <body>
     <h1>Welcome to gitPub</h1>
-    <h2></h2>
+    <ul>
+        <% for (let i=0; i < drinks.length; i++){ %>
+            <li>
+                <%= drinks[i].name %>
+            </li>
+            <% } %>
+    </ul>
 </body>
 
 </html>
