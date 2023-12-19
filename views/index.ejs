@@ -4,33 +4,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        body {
-            background-color: #92a8d1
-        }
+    <%- include("./cssjs.ejs") %>
+        <title>Drinks</title>
+        <style>
+            body {
+                background-color: #B7BF96;
+            }
 
-        h1 {
-            color: blue
-        }
+            h1 {
+                color: #436B5C;
+            }
 
-        ul {
-            text-transform: capitalize;
-        }
-    </style>
+            ul {
+                text-transform: capitalize;
+            }
+        </style>
 </head>
 
 <body>
     <h1>Welcome to gitPub</h1>
-    <ul>
-        <% for (let i=0; i < drinks.length; i++){ %>
-            <a href="/drinks/<%= i %>">
-                <li>
-                    <%= drinks[i].name %>
-                </li>
-            </a>
-            <% } %>
-    </ul>
+    <div class="list">
+        <ul>
+            <% for (let i=0; i < drinks.length; i++){ %>
+                <a href="/drinks/<%= i %>">
+                    <li>
+                        <%= drinks[i].name %>
+                    </li>
+                </a>
+                <% } %>
+        </ul>
+    </div>
 </body>
 
 </html>

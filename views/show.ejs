@@ -4,33 +4,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        body {
-            background-color: #92a8d1
-        }
+    <%- include("./cssjs.ejs") %>
+        <title>Drink</title>
+        <style>
+            body {
+                background-color: #B7BF96;
+            }
 
-        h1 {
-            color: blue
-        }
+            h1 {
+                color: #436B5C;
+            }
 
-        ul {
-            text-transform: capitalize;
-        }
-    </style>
+            ul {
+                text-transform: capitalize;
+            }
+
+            body {
+                text-align: center;
+            }
+        </style>
 </head>
 
 <body>
     <h1>At foo bar</h1>
-    <% console.log(drink)%>
-        <h2>
-            <%= drink.name %>
-        </h2>
 
-        <img src="<%drink.image %>.png">
+    <h2>
+        <%= drink.name %>
+    </h2>
 
-        <h3>
-            $<%= drink.price%>
-        </h3>
-        <a href="/drinks">back</a>
+    <img src="<%drink.image %>.png">
+
+    <h3>
+        $<%= drink.price%>
+    </h3>
+    <a href="/drinks">back</a>
 </body>
