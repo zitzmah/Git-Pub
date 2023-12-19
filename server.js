@@ -6,6 +6,9 @@ const express = require("express")
 const drinks = require("./models/drinks.js")
 const app = express()
 
+// middleware
+app.use(express.static("public"))
+
 //******************************* */
 //        ROUTES
 //******************************* */
@@ -19,7 +22,10 @@ app.get("/drinks", (req, res) => {
 })
 
 app.get("/drinks/:id", (req, res) => {
-    res.send(req.params.id)
+    const id = req.params.id
+    const drink = drinks[id]
+    console.log(drink)
+    res.render("show.ejs", { drink })
 })
 
 //******************************* */
