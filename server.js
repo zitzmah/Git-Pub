@@ -28,6 +28,14 @@ app.get("/drinks/:id", (req, res) => {
     res.render("show.ejs", { drink })
 })
 
+app.get("/fruits/:id", (req, res) => {
+    const id = req.params.id
+    const fruit = fruits[id]
+    res.send(fruit)
+    //res.render("show.ejs", { fruit })
+    // {fruit} is the same as {fruit:fruit}
+})
+
 //******************************* */
 //    TURN ON SERVER LISTENER
 //******************************* */
